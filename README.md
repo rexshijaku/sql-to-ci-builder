@@ -68,7 +68,7 @@ $db->table('members')
 ```
 ##### Notice 
 In both of these examples Codeigniter 4 was used. If you need to change it, or get more comprehensive understanding of provided options then see the following section of Options.
-There are dozens of examples for every use case explained in the Query Builder documentation for both version 3 and version 4 located in their respecitve folders inside the <a href="https://github.com/rexshijaku/ChoiceFilter/tree/master/demo">examples</a> folder.
+There are dozens of examples for every use case explained in the Query Builder documentation for both version 3 and version 4 located in their respecitve folders inside the <a href="https://github.com/rexshijaku/sql-to-ci-builder/tree/main/examples">examples</a> folder.
 
 ### Options
 Some important options are briefly explained below:
