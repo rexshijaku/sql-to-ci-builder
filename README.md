@@ -1,5 +1,5 @@
 # Yazan - SQLToCIBuilder
-Adavanced SQL to Codeigniter Query Builder Converter written in PHP
+SQL to Codeigniter Query Builder, A Converter written in PHP
 
 ### Features
 - Converts SQL Queries to Codeigniter Query Builder. 
@@ -16,8 +16,8 @@ Adavanced SQL to Codeigniter Query Builder Converter written in PHP
 Live demo and free usage will be available soon.
 
 ### Get Started
-##### Install by manual download: 
-Download the repository and install required packages by composer.json :
+##### Install by a manual download: 
+Download the repository and install required packages by composer.json.
 
 ##### Packagist
 You can also install it from packagist by running the following command:
@@ -48,7 +48,6 @@ $this->db->countAll('members');
 ##### A more complex example :
 
 ```php
-<?php 
 $sql = "SELECT * FROM members WHERE age > 30 
                             OR (name LIKE 'J%' OR (surname='P' AND name IS NOT NULL)) AND AGE !=30";
 $converter->convert($sql);
@@ -78,10 +77,10 @@ Some important options are briefly explained below:
 | civ  | integer | 3 |  Your Codeigniter version. |
 | db_instance  |  string | $this->db | Object in which database was loaded and initialized. |
 | use_from |   boolean  | false  | In CodeIgniter 3, wether it should use 'from' command instead of 'get' to select data from a table. |
-| group |   boolean | true  | Wether it should group key value pairs into a php array, or generate commands for each key value pair. |
+| group |   boolean | true  | Whether it should group key value pairs into a php array, or generate commands for each key value pair. |
 | single_line |  boolean  | true |  When this argument is true, then converter tries to generate a single command instead of multiple. |
 
-### How does it works?
+### How does it works ?
 Will be explained soon.
 
 ### Known issues

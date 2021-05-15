@@ -24,8 +24,6 @@ class SQLToCIBuilder
      */
     public function convert($sql)
     {
-        echo "<br>";
-        echo "<br>";
         $this->sql = $sql;
         try {
 
