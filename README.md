@@ -2,13 +2,13 @@
 Adavanced SQL to Codeigniter Query Builder Converter written in PHP
 
 ### Features
-Converts SQL Queries to Codeigniter Query Builder.
-Assists on creating optimal query as instructed in Codeigniter Documentation. 
-Provides options to interact with, for generating different results.
+- Converts SQL Queries to Codeigniter Query Builder. 
+- Assists on creating optimal query as instructed in Codeigniter Documentation.  
+- Provides options to interact with, for generating different results. 
 
 ### Supports 
-Codeigniter 3 
-Codeigniter 4 
+- Codeigniter 3 
+- Codeigniter 4 
 
 ### Demo
 
