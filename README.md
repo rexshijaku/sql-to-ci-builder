@@ -22,7 +22,7 @@ Download the repository and install required packages by composer.json :
 ##### Packagist
 You can also install it from packagist by running the following command:
 ```html
-composer install sql-to-ci-builder
+composer require rexshijaku/sql-to-ci-builder
 ```
 
 ### Usage
