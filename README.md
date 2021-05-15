@@ -33,7 +33,7 @@ composer require rexshijaku/sql-to-ci-builder
 
 use RexShijaku\SQLToCIBuilder;
 
-require_once dirname(__FILE__) . '/../../vendor/autoload.php';
+require_once dirname(__FILE__) . './vendor/autoload.php';
 
 $options = array('civ' => 4);
 $converter = new SQLToCIBuilder($options);
