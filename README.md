@@ -1,4 +1,4 @@
-# Yazan - SQLToCIBuilder
+# Yazan - SQL-To-CI-Builder
 SQL to Codeigniter Query Builder, A Converter written in PHP
 
 ### Features
@@ -81,13 +81,23 @@ Some important options are briefly explained below:
 | single_line |  boolean  | true |  When this argument is true, then converter tries to generate a single command instead of multiple. |
 
 ### How does it works ?
-Will be explained soon.
+SQL-To-CI-Builder is built on top of <a href="hhttps://github.com/greenlion/PHP-SQL-Parser">PHP-SQL-Parser</a>. While <a href="hhttps://github.com/greenlion/PHP-SQL-Parser">PHP-SQL-Parser</a> is responsible for parsing the given SQL Query as input. The result of the  <a href="hhttps://github.com/greenlion/PHP-SQL-Parser">PHP-SQL-Parser</a> is the input of SQL-To-CI-Builder.
+
+The structure has three main parts : 
+1) Extractors classes - which help to pull out SQL Query parts in a way which are more understandable and processable by Builders. 
+2) Builder classes - which help to construct Query Builder methods.
+3) Creator - which orchestrates the process between Extractors and Builders in order to produce parts of Query Builder.
 
 ### Known issues
-Will be explained soon.
+It is not tested in all cases. They should be added.
+Poor error handling.
+
+
+### Contributions 
+Feel free to contribute. Either on development or testing.
 
 ### Support
-For general questions about Yazan - SQLToCIBuilder, tweet at @rexshijaku or write me an email on rexhepshijaku@gmail.com.
+For general questions about Yazan - SQL-To-CI-Builder, tweet at @rexshijaku or write me an email on rexhepshijaku@gmail.com.
 To have a quick tutorial check the examples folder provided in the repository.
 
 ### Author
