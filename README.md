@@ -89,12 +89,11 @@ The structure has three main parts :
 3) Creator - which orchestrates the process between Extractors and Builders in order to produce parts of Query Builder.
 
 ### Known issues
-It is not tested in all cases. They should be added.
-Poor error handling.
-
+- It is not tested in all cases. They should be added.
+- Poor error handling.
 
 ### Contributions 
-Feel free to contribute. Either on development or testing.
+Feel free to contribute on development, testing or eventual bug reporting.
 
 ### Support
 For general questions about Yazan - SQL-To-CI-Builder, tweet at @rexshijaku or write me an email on rexhepshijaku@gmail.com.
