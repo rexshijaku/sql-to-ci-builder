@@ -1,6 +1,6 @@
 <?php
 
-namespace RexShijaku\utils;
+namespace RexShijaku\SQLToCIBuilder\utils;
 
 class CriterionContext
 {

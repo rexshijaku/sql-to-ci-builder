@@ -1,8 +1,8 @@
 <?php
 
-namespace RexShijaku\builders;
+namespace RexShijaku\SQLToCIBuilder\builders;
 
-use RexShijaku\utils\SelectQueryTypes;
+use RexShijaku\SQLToCIBuilder\utils\SelectQueryTypes;
 
 
 /**

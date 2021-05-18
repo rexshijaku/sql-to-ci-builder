@@ -1,6 +1,6 @@
 <?php
 
-namespace RexShijaku;
+namespace RexShijaku\SQLToCIBuilder;
 
 use PHPSQLParser\PHPSQLParser;
 

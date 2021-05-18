@@ -1,6 +1,6 @@
 <?php
 
-namespace RexShijaku\extractors;
+namespace RexShijaku\SQLToCIBuilder\extractors;
 
 /**
  * This class provides common functionality for all Extractor classes.

@@ -1,10 +1,10 @@
 <?php
 
-namespace RexShijaku\builders;
+namespace RexShijaku\SQLToCIBuilder\builders;
 
 
-use RexShijaku\utils\CriterionContext;
-use RexShijaku\utils\CriterionTypes;
+use RexShijaku\SQLToCIBuilder\utils\CriterionContext;
+use RexShijaku\SQLToCIBuilder\utils\CriterionTypes;
 
 /**
  * This class constructs and produces following Query Builder methods :

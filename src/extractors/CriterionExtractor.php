@@ -1,9 +1,9 @@
 <?php
 
-namespace RexShijaku\extractors;
+namespace RexShijaku\SQLToCIBuilder\extractors;
 
-use RexShijaku\utils\CriterionContext;
-use RexShijaku\utils\CriterionTypes;
+use RexShijaku\SQLToCIBuilder\utils\CriterionContext;
+use RexShijaku\SQLToCIBuilder\utils\CriterionTypes;
 
 /**
  * This class extracts and compiles SQL query parts for the following Query Builder methods :

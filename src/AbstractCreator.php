@@ -1,6 +1,6 @@
 <?php
 
-namespace RexShijaku;
+namespace RexShijaku\SQLToCIBuilder;
 
 /**
  * This class provides additional functionality for the Creator class.

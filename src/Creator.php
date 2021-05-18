@@ -1,30 +1,30 @@
 <?php
 
-namespace RexShijaku;
+namespace RexShijaku\SQLToCIBuilder;
 
-use RexShijaku\builders\CriterionBuilder;
-use RexShijaku\builders\DeleteBuilder;
-use RexShijaku\builders\FromBuilder;
-use RexShijaku\builders\GroupByBuilder;
-use RexShijaku\builders\HavingBuilder;
-use RexShijaku\builders\InsertBuilder;
-use RexShijaku\builders\JoinBuilder;
-use RexShijaku\builders\LimitBuilder;
-use RexShijaku\builders\OrderBuilder;
-use RexShijaku\builders\SelectBuilder;
-use RexShijaku\builders\UnionBuilder;
-use RexShijaku\builders\UpdateBuilder;
-use RexShijaku\extractors\CriterionExtractor;
-use RexShijaku\extractors\DeleteExtractor;
-use RexShijaku\extractors\FromExtractor;
-use RexShijaku\extractors\GroupByExtractor;
-use RexShijaku\extractors\HavingExtractor;
-use RexShijaku\extractors\InsertExtractor;
-use RexShijaku\extractors\JoinExtractor;
-use RexShijaku\extractors\LimitExtractor;
-use RexShijaku\extractors\OrderExtractor;
-use RexShijaku\extractors\SelectExtractor;
-use RexShijaku\extractors\UpdateExtractor;
+use RexShijaku\SQLToCIBuilder\builders\CriterionBuilder;
+use RexShijaku\SQLToCIBuilder\builders\DeleteBuilder;
+use RexShijaku\SQLToCIBuilder\builders\FromBuilder;
+use RexShijaku\SQLToCIBuilder\builders\GroupByBuilder;
+use RexShijaku\SQLToCIBuilder\builders\HavingBuilder;
+use RexShijaku\SQLToCIBuilder\builders\InsertBuilder;
+use RexShijaku\SQLToCIBuilder\builders\JoinBuilder;
+use RexShijaku\SQLToCIBuilder\builders\LimitBuilder;
+use RexShijaku\SQLToCIBuilder\builders\OrderBuilder;
+use RexShijaku\SQLToCIBuilder\builders\SelectBuilder;
+use RexShijaku\SQLToCIBuilder\builders\UnionBuilder;
+use RexShijaku\SQLToCIBuilder\builders\UpdateBuilder;
+use RexShijaku\SQLToCIBuilder\extractors\CriterionExtractor;
+use RexShijaku\SQLToCIBuilder\extractors\DeleteExtractor;
+use RexShijaku\SQLToCIBuilder\extractors\FromExtractor;
+use RexShijaku\SQLToCIBuilder\extractors\GroupByExtractor;
+use RexShijaku\SQLToCIBuilder\extractors\HavingExtractor;
+use RexShijaku\SQLToCIBuilder\extractors\InsertExtractor;
+use RexShijaku\SQLToCIBuilder\extractors\JoinExtractor;
+use RexShijaku\SQLToCIBuilder\extractors\LimitExtractor;
+use RexShijaku\SQLToCIBuilder\extractors\OrderExtractor;
+use RexShijaku\SQLToCIBuilder\extractors\SelectExtractor;
+use RexShijaku\SQLToCIBuilder\extractors\UpdateExtractor;
 
 /**
  * This class orchestrates the process between Extractors and Builders in order to produce parts of Query Builder and arranges them

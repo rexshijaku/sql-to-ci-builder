@@ -1,10 +1,9 @@
 <?php
 
-namespace RexShijaku\builders;
+namespace RexShijaku\SQLToCIBuilder\builders;
 
 
-use RexShijaku\utils\FromQueryTypes;
-use RexShijaku\utils\SelectQueryTypes;
+use RexShijaku\SQLToCIBuilder\utils\FromQueryTypes;
 
 /**
  * This class constructs and produces following Query Builder methods :

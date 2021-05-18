@@ -1,6 +1,6 @@
 <?php
 
-namespace RexShijaku\extractors;
+namespace RexShijaku\SQLToCIBuilder\extractors;
 
 /**
  *  Extractor.php

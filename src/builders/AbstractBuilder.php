@@ -1,6 +1,6 @@
 <?php
 
-namespace RexShijaku\builders;
+namespace RexShijaku\SQLToCIBuilder\builders;
 
 /**
  * This class provides common functionality for all Builder classes.

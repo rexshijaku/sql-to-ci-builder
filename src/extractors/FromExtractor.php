@@ -1,8 +1,8 @@
 <?php
 
-namespace RexShijaku\extractors;
+namespace RexShijaku\SQLToCIBuilder\extractors;
 
-use RexShijaku\utils\FromQueryTypes;
+use RexShijaku\SQLToCIBuilder\utils\FromQueryTypes;
 
 /**
  * This class extracts and compiles SQL query parts for the following Query Builder methods :
