@@ -214,11 +214,13 @@ class Creator extends AbstractCreator
         $this->qb = $builder->build($parts);
     }
 
-    function getQuery($sql)
+    function getQuery($sql, $add_db_instance = false)
     {
         $this->qb .= $this->lastly;
         if (empty($this->qb)) {
-            $this->qb .= $this->options['db_instance'] . "->query('" . $sql . "')";
+            if ($add_db_instance)
+                $this->qb .= $this->options['db_instance'];
+            $this->qb .= "->query('" . $sql . "')";
         } else {
             if (!$this->qb_closed)
                 $this->qb .= isset($this->options['is_union']) ? '' : '->get()';

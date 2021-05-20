@@ -32,7 +32,7 @@ class SQLToCIBuilder
             $this->options->validate();
 
             $parser = new PHPSQLParser($this->sql);
-            $parsed = $parser->parsed;
+            $parsed = is_array($parser->parsed) ? $parser->parsed : array();
             $this->creator = new Creator($this, $this->options->get());
             return $this->parse($parsed);
         } catch (\Exception $exception) {
@@ -40,7 +40,7 @@ class SQLToCIBuilder
             if (isset($this->creator)) {
                 $this->creator->resetQ();
                 return $exception->getMessage() .
-                    ' Alternative result : ' . $this->creator->getQuery($this->sql);
+                    ' Alternative result : ' . $this->creator->getQuery($this->sql, true);
             } else {
                 return $exception->getMessage();
             }
