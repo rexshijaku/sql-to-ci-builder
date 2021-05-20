@@ -31,7 +31,7 @@ composer require rexshijaku/sql-to-ci-builder
 ```php
 <?php
 
-use RexShijaku\SQLToCIBuilder;
+use RexShijaku\SQLToCIBuilder\SQLToCIBuilder;
 
 require_once dirname(__FILE__) . './vendor/autoload.php';
 
