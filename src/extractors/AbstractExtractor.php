@@ -83,8 +83,10 @@ abstract class AbstractExtractor
         else {
             if ($val['expr_type'] == 'subquery') {
                 $return = '(' . $val['base_expr'] . ')';
-            } else
+            } else {
+                unset($val['alias']); // when base expr, alias already is present
                 $return = $val['base_expr'];
+            }
         }
         if ($this->isAlias($val))
             $return .= ' ' . $val['alias']['base_expr'];

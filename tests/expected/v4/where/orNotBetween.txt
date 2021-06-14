@@ -1,0 +1,1 @@
+$db->table('members')->where('age >=', 20)->where('age <=', 40)->orWhere("!(age BETWEEN 40 AND 45)")->get();

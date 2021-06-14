@@ -79,7 +79,7 @@ class HavingBuilder extends AbstractBuilder implements Builder
         $query_val .= '(';
         $query_val .= $inner_part;
         if (!$esc)
-            $query_val .= ',FALSE';
+            $query_val .= ', FALSE';
         $query_val .= ")";
     }
 
@@ -97,7 +97,7 @@ class HavingBuilder extends AbstractBuilder implements Builder
                 $inner .= $this->quote($group['field'] . ' ' . $operator);
             else
                 $inner .= $this->quote($group['field']);
-            $inner .= '  ' . $delimiter;
+            $inner .= $delimiter.' ';
             $inner .= $this->wrapValue($group['value']);
         }
         return $inner;

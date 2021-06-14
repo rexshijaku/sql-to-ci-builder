@@ -28,7 +28,7 @@ class GroupByBuilder extends AbstractBuilder implements Builder
         if ($parts_len == 1)
             $inner .= $this->quote($parts[0]);
         else if ($parts_len > 1)
-            $inner .= "array(" . implode(",", array_map(array($this, 'quote'), $parts)) . ")";
+            $inner .= "array(" . implode(", ", array_map(array($this, 'quote'), $parts)) . ")";
 
         $qb .= "->" . $this->fnMerger(array('group', 'by'));
         $qb .= '(' . $inner . ')';

@@ -90,7 +90,7 @@ echo $converter->convert($sql);
 $sql = "SELECT * FROM members WHERE age NOT IN(20,30)";
 echo $converter->convert($sql);
 // prints
-//          $this->db->get_where('members', array('age' => null));
+//         $this->db->where_not_in('age',array(20,30))->get('members');
 
 //==========================================================
 

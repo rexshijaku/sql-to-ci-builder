@@ -1,0 +1,1 @@
+$this->db->like('name', 'j', 'both')->like('surname', 'j', 'after')->or_not_like('title', 'gui', 'before')->get('members');

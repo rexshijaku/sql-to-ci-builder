@@ -1,0 +1,1 @@
+$this->db->select('*')->having('age+20 >', 45, FALSE)->or_having('salary-200 >', 500, FALSE)->get('members');

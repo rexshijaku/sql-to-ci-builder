@@ -1,0 +1,1 @@
+$db->table('members')->whereNotIn('age', array(20,30))->get();

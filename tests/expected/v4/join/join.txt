@@ -1,0 +1,1 @@
+$db->table('members')->select('*')->join('details', 'members.id = details.members_id')->get();

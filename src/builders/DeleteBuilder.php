@@ -45,7 +45,7 @@ class DeleteBuilder extends AbstractBuilder implements Builder
     private function buildSingleLine($table, $where)
     {
         if ($this->options['civ'] < 4)
-            $qb = '->delete(' . $this->quote($table) . ',' . $this->arrayify($where) . ')';
+            $qb = '->delete(' . $this->quote($table) . ', ' . $this->arrayify($where) . ')';
         else {
             $this->query_start = '->table(' . $this->quote($table) . ')';
             $qb = '->delete(' . $this->arrayify($where) . ')';

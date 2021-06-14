@@ -13,13 +13,13 @@ echo $converter->convert($sql);
 // prints
 //          $db->table('members')
 //            ->groupStart()
-//            ->where('age',25)
+//            ->where('age', 25)
 //                ->orGroupStart()
-//                    ->where('salary',2000)
-//                    ->where('gender','m')
+//                    ->where('salary', 2000)
+//                    ->where('gender', 'm')
 //                ->groupEnd()
 //            ->groupEnd()
-//            ->where('id >',100800)
+//            ->where('id >', 100800)
 //            ->get();
 
 //==========================================================

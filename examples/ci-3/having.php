@@ -17,12 +17,12 @@ echo $converter->convert($sql);
 
 //==========================================================
 
-$sql = "SELECT age FROM members HAVING age+20 > 25";
+$sql = "SELECT age FROM members HAVING age+20 > 45";
 echo $converter->convert($sql);
 
 // prints
 //         $this->db->select('age')
-//            ->having('age+20 >', 25, FALSE)
+//            ->having('age+20 >', 45, FALSE)
 //            ->get('members');
 
 //==========================================================
@@ -66,11 +66,11 @@ echo $converter->convert($sql);
 
 //==========================================================
 
-$sql = "SELECT name,age,salary,gender FROM members HAVING name like '%r' AND gender = 'm' or salary>1000 AND gender=0 AND age+2=25";
+$sql = "SELECT name,age,salary,gender FROM members HAVING name like '%R' AND gender = 'm' or salary>1000 AND gender=0 AND age+2=25";
 echo $converter->convert($sql);
 // prints
 //           $this->db->select('name,age,salary,gender')
-//              ->having(array('name like \'%r\'' =>null,'gender' =>'m'))
+//              ->having(array('name like \'%R\'' =>null,'gender' =>'m'))
 //              ->or_having('salary >' ,1000)
 //              ->having('age+2' ,25,FALSE)
 //              ->having('gender' ,0)

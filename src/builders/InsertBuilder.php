@@ -34,13 +34,13 @@ class InsertBuilder extends AbstractBuilder implements Builder
                 exit('Invalid value-column!');
 
             if ($is_batch && $record_key > 0)
-                $inner_arrays .= ",";
+                $inner_arrays .= ", ";
 
             $single_array = $is_batch ? 'array(' : '';
             foreach ($record as $k => $col_val) {
                 if ($k > 0)
-                    $single_array .= ',';
-                $single_array .= $this->quote($parts['columns'][$k]) . '=>' . ($this->wrapValue($col_val));
+                    $single_array .= ', ';
+                $single_array .= $this->quote($parts['columns'][$k]) . ' => ' . ($this->wrapValue($col_val));
                 //todo datum subtree? +escape removal
             }
             $inner_arrays .= $single_array . ($is_batch ? ')' : '');
@@ -64,7 +64,7 @@ class InsertBuilder extends AbstractBuilder implements Builder
                 $qb = '->set(' . $outer_array . ')'; // todo set line-by-line single?!
                 $qb .= "->" . $ci_part . "(" . $this->quote($table) . ')';
             } else
-                $qb = "->" . $ci_part . "(" . $this->quote($table) . ',' . $outer_array . ')';
+                $qb = "->" . $ci_part . "(" . $this->quote($table) . ', ' . $outer_array . ')';
         } else {
             $qb = "->table(" . $this->quote($table) . ')';
             if (!$this->options['single_command']) {

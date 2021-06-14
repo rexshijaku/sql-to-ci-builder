@@ -1,0 +1,1 @@
+$db->table('members')->like('name', 'j', 'both')->like('surname', 'j', 'after')->orNotLike('title', 'gui', 'before')->get();

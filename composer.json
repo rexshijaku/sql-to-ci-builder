@@ -8,7 +8,7 @@
     "codeigniter-database",
     "active-record"
   ],
-  "homepage": "https://github.com/rexshijaku/SQLToCIBuilder",
+  "homepage": "https://github.com/rexshijaku/sql-to-ci-builder",
   "license": "MIT",
   "authors": [
     {
@@ -20,9 +20,17 @@
   "require": {
     "greenlion/php-sql-parser": "^4.4"
   },
+  "require-dev": {
+    "phpunit/phpunit": "^9.5"
+  },
   "autoload": {
     "psr-4": {
       "RexShijaku\\SQLToCIBuilder\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "RexShijaku\\SQLToCIBuilder\\Test\\": "tests/cases/"
     }
   }
 }

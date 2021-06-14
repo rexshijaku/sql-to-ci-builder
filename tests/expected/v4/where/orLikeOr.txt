@@ -1,0 +1,1 @@
+$db->table('members')->where('age+0', 'age', FALSE)->orLike('name', 'j', 'both')->orWhere('id+2 >', 'id+5', FALSE)->get();

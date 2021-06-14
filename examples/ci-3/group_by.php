@@ -15,7 +15,7 @@ echo $converter->convert($sql);
 // prints
 //          $this->db->select('age,salary,count(*)')
 //                ->group_by(array('age', 'salary'))
-//                ->get('members')
+//                ->get('members');
 
 //==========================================================
 

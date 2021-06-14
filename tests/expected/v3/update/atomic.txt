@@ -1,0 +1,1 @@
+$this->db->update('members', array('age' => 10), array('id' => 2));

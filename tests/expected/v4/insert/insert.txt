@@ -1,0 +1,1 @@
+$db->table('members')->insert(array('name' => 'Jökull', 'surname' => 'Júlíusson', 'age' => 30));

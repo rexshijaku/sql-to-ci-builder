@@ -1,0 +1,1 @@
+$db->table('members')->where(array('id' => 2))->set('age', 'age+10', FALSE)->update();

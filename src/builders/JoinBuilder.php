@@ -22,9 +22,9 @@ class JoinBuilder extends AbstractBuilder implements Builder
         foreach ($parts as $join) {
             $condition_part = (implode(' ' . implode(' ', $join['condition_separators']) . ' ', $join['condition_fields']));
             if ($this->getValue($join['type']) !== 'join')
-                $qb .= "->join(" . $this->quote($join['table']) . "," . $this->quote($condition_part) . ", " . $this->quote($join['type']) . ")";
+                $qb .= "->join(" . $this->quote($join['table']) . ", " . $this->quote($condition_part) . ", " . $this->quote($join['type']) . ")";
             else
-                $qb .= "->join(" . $this->quote($join['table']) . "," . $this->quote($condition_part) . ")";
+                $qb .= "->join(" . $this->quote($join['table']) . ", " . $this->quote($condition_part) . ")";
         }
 
         return $qb;

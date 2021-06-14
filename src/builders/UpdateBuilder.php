@@ -21,11 +21,11 @@ class UpdateBuilder extends AbstractBuilder implements Builder
         $q = '';
         if ($this->options['civ'] < 4) {
             if ($this->options['group'] && $parts['inline_set']) {
-                $update_q = "->" . $ci_part . "(" . $this->quote($parts['table']) . ',' . $this->getSetAsArray($parts['records']);
+                $update_q = "->" . $ci_part . "(" . $this->quote($parts['table']) . ', ' . $this->getSetAsArray($parts['records']);
                 if ($parts['where'] !== false) //200a
                 {
                     $skip_bag[] = 'WHERE';
-                    $update_q .= ',' . $this->arrayify($parts['where']) . ')';
+                    $update_q .= ', ' . $this->arrayify($parts['where']) . ')';
                 } else
                     $update_q .= ')';
             } else {
@@ -53,8 +53,8 @@ class UpdateBuilder extends AbstractBuilder implements Builder
         $inner_array = '';
         foreach ($records as $record) {
             if (!empty($inner_array))
-                $inner_array .= ',';
-            $inner_array .= ($this->quote($record['field']) . '=>' . $this->wrapValue($record['value']));
+                $inner_array .= ', ';
+            $inner_array .= ($this->quote($record['field']) . ' => ' . $this->wrapValue($record['value']));
         }
         return 'array(' . $inner_array . ')';
     }
@@ -66,9 +66,9 @@ class UpdateBuilder extends AbstractBuilder implements Builder
 
         $local_qb = '';
         foreach ($records as $record) {
-            $local_qb .= "->set(" . $this->quote($record['field']) . "," . $this->wrapValue($record['value']);
+            $local_qb .= "->set(" . $this->quote($record['field']) . ", " . $this->wrapValue($record['value']);
             if (!$record['escape'])
-                $local_qb .= ',FALSE';
+                $local_qb .= ', FALSE';
             $local_qb .= ")";
         }
         return $local_qb;

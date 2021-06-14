@@ -50,10 +50,10 @@ class CriterionBuilder extends AbstractBuilder implements Builder
                 $operator_tokens = $this->getValue($part['sep']) == 'and' ? array('where') : array('or', 'where');
                 $ci_part = $this->fnMerger($operator_tokens);
 
-                $inner = $this->quote($part['field'] . rtrim(' ' . $op)) . ',' . $this->wrapValue($part['value']);
+                $inner = $this->quote($part['field'] . rtrim(' ' . $op)) . ', ' . $this->wrapValue($part['value']);
 
                 if (!$part['escape'])
-                    $inner .= ',FALSE';
+                    $inner .= ', FALSE';
 
                 $query_val .= '->' . $ci_part . '(' . $inner . ')';
 
@@ -64,14 +64,14 @@ class CriterionBuilder extends AbstractBuilder implements Builder
                 $operator_tokens = array_merge($operator_tokens, $part['operators']); // not + in part (depending on what is sent)
                 $ci_part = $this->fnMerger($operator_tokens);
 
-                $query_val .= '->' . $ci_part . '(' . $this->quote($part['field']) . ',';
+                $query_val .= '->' . $ci_part . '(' . $this->quote($part['field']) . ', ';
                 if (isset($part['as_php_arr']) && $part['as_php_arr'] == true)
                     $query_val .= 'array' . $part['value'];
                 else {
                     $query_val .= $this->wrapValue($this->unBracket($part['value']));
                 }
                 if (!$part['escape'])
-                    $query_val .= ',FALSE';
+                    $query_val .= ', FALSE';
                 $query_val .= ')';
             } else if ($part['type'] == CriterionTypes::Like) {
 
@@ -101,10 +101,10 @@ class CriterionBuilder extends AbstractBuilder implements Builder
                 $operator_tokens = array_merge($operator_tokens, $part['operators']);
                 $ci_part = $this->fnMerger($operator_tokens);
 
-                $query_val .= '->' . $ci_part . '(' . $this->quote($part['field']) . ',' . $this->wrapValue($part['value']) . ',' . $this->quote($side);
+                $query_val .= '->' . $ci_part . '(' . $this->quote($part['field']) . ', ' . $this->wrapValue($part['value']) . ', ' . $this->quote($side);
 
                 if (!$part['escape'])
-                    $query_val .= ',FALSE';
+                    $query_val .= ', FALSE';
 
                 $query_val .= ')';
 
@@ -177,8 +177,8 @@ class CriterionBuilder extends AbstractBuilder implements Builder
             $pt_1 .= '->' . $command . '(';
             $pt_2 .= '->' . $command . '(';
 
-            $pt_1 .= $this->quote($part['field'] . ' >=') . ',' . $this->wrapValue(implode('', $part['values'][0]));
-            $pt_2 .= $this->quote($part['field'] . ' <=') . ',' . $this->wrapValue(implode('', $part['values'][1]));
+            $pt_1 .= $this->quote($part['field'] . ' >=') . ', ' . $this->wrapValue(implode('', $part['values'][0]));
+            $pt_2 .= $this->quote($part['field'] . ' <=') . ', ' . $this->wrapValue(implode('', $part['values'][1]));
 
             if (!$part['field_escape'] || !$part['value_escape'][0]) {
                 $pt_1 .= ',FALSE';

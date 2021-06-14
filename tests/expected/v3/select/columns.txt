@@ -1,0 +1,1 @@
+$this->db->select('name,surname,age')->get('members', 10, 20);

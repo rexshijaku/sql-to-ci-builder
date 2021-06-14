@@ -72,12 +72,12 @@ echo $converter->convert($sql);
 
 //==========================================================
 
-$sql = "SELECT name,age,salary,gender FROM members HAVING name like '%r' AND gender = 'm' or HAVING salary>1000 AND HAVING gender=0 AND age+2=25";
+$sql = "SELECT name,age,salary,gender FROM members HAVING name like '%R' AND gender = 'm' or HAVING salary>1000 AND HAVING gender=0 AND age+2=25";
 echo $converter->convert($sql);
 // prints
 //           $db->table('members')
 //            ->select('name,age,salary,gender')
-//            ->having(array('name like \'%r\'' => null, 'gender' => 'm'))
+//            ->having(array('name like \'%R\'' => null, 'gender' => 'm'))
 //            ->orHaving('salary >', 1000)
 //            ->having('age+2', 25, FALSE)
 //            ->having('gender', 0)

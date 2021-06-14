@@ -46,7 +46,7 @@ class LimitBuilder extends AbstractBuilder implements Builder
         if ($this->is_valid($parts, 'offset'))
             $to_merge[] = $parts['offset']; //  adding in order important
 
-        $inner .= implode(",", $to_merge);
+        $inner .= implode(", ", $to_merge);
         return $inner;
     }
 

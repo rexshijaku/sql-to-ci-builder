@@ -8,7 +8,7 @@ require_once dirname(__FILE__) . '/../../vendor/autoload.php';
 //==========================================================
 
 $converter = new SQLToCIBuilder(array('civ' => 3));
-$sql = " SELECT * FROM (members) WHERE ( age = 25 OR ( salary = 2000 AND gender = 'm' ) ) AND id > 100800";
+$sql = "SELECT * FROM (members) WHERE ( age = 25 OR ( salary = 2000 AND gender = 'm' ) ) AND id > 100800";
 echo $converter->convert($sql);
 // prints
 //          $this->db->select('*')

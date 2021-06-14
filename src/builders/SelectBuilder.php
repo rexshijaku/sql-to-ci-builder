@@ -95,7 +95,7 @@ class SelectBuilder extends AbstractBuilder implements Builder
             $qb .= $this->getPart();
             $qb .= '(' . $this->quote($table);
             if ($limit_set)
-                $qb .= ',';
+                $qb .= ', ';
         } else {
             $this->query_start = '->table(' . $this->quote($table) . ')';
             $qb = '->get(';
@@ -117,7 +117,7 @@ class SelectBuilder extends AbstractBuilder implements Builder
         $qb .= '(';
 
         if ($this->options['civ'] < 4) // in previous version get_where(table,where)
-            $qb .= $this->quote($table) . ',' . $this->arrayify($where);
+            $qb .= $this->quote($table) . ', ' . $this->arrayify($where);
         else // now getWhere(where);
         {
             $this->query_start = '->table(' . $this->quote($table) . ')';
@@ -125,7 +125,7 @@ class SelectBuilder extends AbstractBuilder implements Builder
         }
 
         if ($limit !== false) {
-            $qb .= ',';
+            $qb .= ', ';
             $builder = new LimitBuilder($this->options);
             $qb .= $builder->buildInner($limit);
         }

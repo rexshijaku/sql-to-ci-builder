@@ -1,0 +1,1 @@
+$db->table('members')->where('age >', 30)->orGroupStart()->like('name', 'J', 'after')->orGroupStart()->where('surname', 'P')->where('name !=', null)->groupEnd()->groupEnd()->where('AGE !=', 30)->get();

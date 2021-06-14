@@ -1,0 +1,1 @@
+$this->db->select('name,age,salary,gender')->having(array('name like \'%R\''  =>null,'gender'=> 'm'))->or_having('salary >', 1000)->having('age+2', 25, FALSE)->having('gender', 0)->get('members');

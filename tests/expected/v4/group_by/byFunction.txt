@@ -1,0 +1,1 @@
+$db->table('members')->select('age,some_function(),count(*)')->groupBy(array('age', 'some_function()'))->get();

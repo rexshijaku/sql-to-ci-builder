@@ -272,7 +272,7 @@ class CriterionExtractor extends AbstractExtractor implements Extractor
                         $escape = false;
                         $field_value = $value[$left_ind]['base_expr'] . $field_value;
                     }
-                } else if ($context == CriterionContext::Having && $op_type == 'colref' && $value[$left_ind]['base_expr'] == ',') {
+                } else if ($context == CriterionContext::Having && $op_type == 'colref' && trim($value[$left_ind]['base_expr']) == ',') {
                     break;
                 } else {
                     if ($op_type == 'reserved') // where x like '%abc'; stop at where, todo needs a better solution
@@ -327,7 +327,7 @@ class CriterionExtractor extends AbstractExtractor implements Extractor
 
                 } else if ($context == CriterionContext::Having
                     && $this->getValue($value[$right_ind]['expr_type']) == 'colref'
-                    && $value[$right_ind]['base_expr'] == ','
+                    && trim($value[$right_ind]['base_expr']) == ','
                 ) {
                     break;
                 } else {

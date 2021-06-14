@@ -10,7 +10,7 @@ $converter = new SQLToCIBuilder(array('civ' => 3));
 $sql = "INSERT INTO members (name, surname, age) VALUES ('Jökull', 'Júlíusson', 30)";
 echo $converter->convert($sql);
 // prints
-//      $this->db->insert('members', array('name' => 'Jokull', 'surname' => 'Juliusson', 'age' => 30));
+//      $this->db->insert('members', array('name' => 'Jökull', 'surname' => 'Júlíusson', 'age' => 30));
 
 //==========================================================
 

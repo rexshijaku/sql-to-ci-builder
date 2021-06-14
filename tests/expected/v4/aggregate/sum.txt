@@ -1,0 +1,1 @@
+$db->table('members')->selectSum('age', 'sum_age')->get();

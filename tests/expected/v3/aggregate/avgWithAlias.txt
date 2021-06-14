@@ -1,0 +1,1 @@
+$this->db->select_avg('age', 'avg_member_age')->get('members');

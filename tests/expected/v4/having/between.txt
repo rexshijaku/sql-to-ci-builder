@@ -1,0 +1,1 @@
+$db->table('members')->select('*')->having('age >=', 25)->having('age <=', 35)->get();

@@ -8,10 +8,10 @@ $converter = new SQLToCIBuilder(array('civ' => 3));
 
 //==========================================================
 
-$sql = "UPDATE members SET age = 30 WHERE id = 2";
+$sql = "UPDATE members SET age = 10 WHERE id = 2";
 echo $converter->convert($sql);
 // prints
-//          $this->db->update('members',array('age'=>30),array('id' => 2));
+//          $this->db->update('members',array('age'=>10),array('id' => 2));
 
 //==========================================================
 

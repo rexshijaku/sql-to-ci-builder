@@ -1,0 +1,1 @@
+$this->db->select('age,salary')->having(array('age >'=> 25,'salary <'=> 3000))->get('members');

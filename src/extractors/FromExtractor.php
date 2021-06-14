@@ -53,6 +53,6 @@ class FromExtractor extends AbstractExtractor implements Extractor
                 if ($this->getValue($p['join_type']) == 'cross')
                     $tables[] = $this->getTableVal($p);
 
-        return implode(',', $tables);
+        return implode(', ', $tables);
     }
 }

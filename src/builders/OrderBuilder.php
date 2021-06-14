@@ -16,11 +16,11 @@ class OrderBuilder extends AbstractBuilder implements Builder
     function build(array $parts, array &$skip_bag = array())
     {
         $q = '';
-        if ($this->options['single_line']) { // all in one line
+        if ($this->options['single_command']) { // all in one line
             $inner = '';
             foreach ($parts as $k => $f_v) {
                 if (!empty($inner))
-                    $inner .= ',';
+                    $inner .= ', ';
 
                 if ($f_v['type'] == 'fn')
                     $inner .= ($f_v['dir']) . ' (' . ($f_v['field']) . ')';
@@ -35,7 +35,7 @@ class OrderBuilder extends AbstractBuilder implements Builder
             foreach ($parts as $k => $f_v) {
                 $q .= "->";
                 $q .= $this->fnMerger(array('order', 'by'));
-                $q .= "(" . $this->quote($f_v['field']) . ',' . $this->quote($f_v['dir']) . ')';
+                $q .= "(" . $this->quote($f_v['field']) . ', ' . $this->quote($f_v['dir']) . ')';
             }
         }
 
