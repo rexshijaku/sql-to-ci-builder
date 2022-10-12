@@ -32,7 +32,7 @@ class CriterionExtractor extends AbstractExtractor implements Extractor
     private $negation_on = false;
     private $handle_outer_negation = false;
 
-    public function extract(array $value, array $parsed = array())
+    public function extract(array $value, array $parsed = array()): array
     {
         $this->getCriteriaParts($value, $parts);
         return $parts;

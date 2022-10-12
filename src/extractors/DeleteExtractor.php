@@ -13,7 +13,7 @@ namespace RexShijaku\SQLToCIBuilder\extractors;
 class DeleteExtractor extends AbstractExtractor implements Extractor
 {
 
-    public function extract(array $value, array $parsed = array())
+    public function extract(array $value, array $parsed = array()): array
     {
         $parts = array();
         $parts['table'] = $parsed['FROM'][0]['base_expr'];

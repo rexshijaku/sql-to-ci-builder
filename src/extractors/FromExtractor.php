@@ -14,7 +14,7 @@ use RexShijaku\SQLToCIBuilder\utils\FromQueryTypes;
  */
 class FromExtractor extends AbstractExtractor implements Extractor
 {
-    public function extract(array $value, array $parsed = array())
+    public function extract(array $value, array $parsed = array()): array
     {
         $parts = array();
 
