@@ -48,7 +48,7 @@ abstract class AbstractBuilder
         }
 
         $str = addslashes($str);
-        return "'" . $str . "'";;
+        return '"' . $str . '"';
     }
 
     /**
@@ -76,10 +76,12 @@ abstract class AbstractBuilder
      *
      * Tries to convert given parts of WHERE method to php array
      *
-     * @param $parts
+     * @param array $parts
+     * @param bool $shorthand Use [] syntax instead of array()
+     * @param bool $multiline Split multiple key-values into new lines
      * @return false|string
      */
-    function arrayify($parts)
+    function arrayify(array $parts, bool $shorthand = false, bool $multiline = false)
     {
         $disposable = array('is' => '', '=' => '', 'is not' => '!=');
         $keys = array_keys($disposable);
@@ -94,8 +96,22 @@ abstract class AbstractBuilder
             $all[] = $this->quote($field . rtrim(' ' . $operator)) . ' => ' . $this->wrapValue($value);
         }
 
-        if (!empty($all))
-            return "array(" . implode(',', $all) . ')';
+        $array_separator = ",";
+        $array_start = "array(";
+        $array_end = ")";
+        if (!empty($all)) {
+            if ($shorthand) {
+                $array_start = "[";
+                $array_end = "]";
+            }
+            if ($multiline) {
+                $array_separator = ",\n\t";
+                $array_start = $array_start . "\n\t";
+                $array_end = "\n" . $array_end;
+            }
+            $array_key_values = implode($array_separator, $all);
+            return $array_start . $array_key_values . $array_end;
+        }
         else
             return false;
     }

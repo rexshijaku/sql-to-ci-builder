@@ -124,7 +124,7 @@ class CriterionBuilder extends AbstractBuilder implements Builder
 
     public function buildAsArray(array $parts)
     {
-        $query_val = $this->arrayify($parts);
+        $query_val = $this->arrayify($parts, true, count($parts) > 1);
         if ($query_val !== false)
             return '->where(' . $query_val . ')';
         return false;

@@ -47,7 +47,10 @@ class InsertExtractor extends AbstractExtractor implements Extractor
             {
                 if ($item['expr_type'] == 'expression')
                 {
-                    $set_expression = array_column($item['sub_tree'], "base_expr", "expr_type");
+                    $set_expression = [
+                        'colref' => $item['sub_tree'][0]['base_expr'],
+                        'const' => $item['sub_tree'][2]['base_expr'],
+                    ];
                     $data[] = $set_expression['const'];
                     $column_list[] = $set_expression['colref'];
                 }

@@ -36,18 +36,18 @@ class InsertBuilder extends AbstractBuilder implements Builder
             if ($is_batch && $record_key > 0)
                 $inner_arrays .= ", ";
 
-            $single_array = $is_batch ? 'array(' : '';
+            $single_array = $is_batch ? '[' : '';
             foreach ($record as $k => $col_val) {
                 if ($k > 0)
-                    $single_array .= ', ';
+                    $single_array .= ',' . PHP_EOL;
                 $single_array .= $this->quote($parts['columns'][$k]) . ' => ' . ($this->wrapValue($col_val));
                 //todo datum subtree? +escape removal
             }
-            $inner_arrays .= $single_array . ($is_batch ? ')' : '');
+            $inner_arrays .= $single_array . ($is_batch ? ']' : '');
         }
 
         if (!empty($inner_arrays)) {
-            $outer_array = 'array(' . $inner_arrays . ')';
+            $outer_array = '[' . PHP_EOL . $inner_arrays . PHP_EOL . ']';
             $qb .= $this->buildLines($is_batch ? array($command, 'batch') : array($command), $parts['table'], $outer_array);
         } else
             exit('some problem');
