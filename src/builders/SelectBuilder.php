@@ -135,7 +135,7 @@ class SelectBuilder extends AbstractBuilder implements Builder
 
     private function selectOnlyQ($parts)
     {
-        $inner = is_array($parts) ? $this->quote(implode(',', $parts)) : $this->quote($parts);
+        $inner = is_array($parts) ? $this->quote(implode(', ', $parts)) : $this->quote($parts);
         $query = '->';
         $ci_part = false ? 'select_raw' : 'select';
         $query .= $ci_part . "(";

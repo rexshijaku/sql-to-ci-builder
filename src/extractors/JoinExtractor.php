@@ -16,7 +16,7 @@ namespace RexShijaku\SQLToCIBuilder\extractors;
 class JoinExtractor extends AbstractExtractor implements Extractor
 {
 
-    public function extract(array $value, array $parsed = array())
+    public function extract(array $value, array $parsed = array()): array
     {
         $joins = array();
         foreach ($value as $k => $val) {

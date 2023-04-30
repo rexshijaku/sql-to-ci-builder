@@ -19,8 +19,8 @@ interface Extractor
      *
      * @param array $value
      * @param array $parsed
-     * @return A string, which contains a part of an SQL statement.
+     * @return array A string, which contains a part of an SQL statement.
      */
-    public function extract(array $value, array $parsed = array());
+    public function extract(array $value, array $parsed = array()): array;
 }
 

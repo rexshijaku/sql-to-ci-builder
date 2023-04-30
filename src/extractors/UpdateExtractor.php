@@ -14,7 +14,7 @@ class UpdateExtractor extends AbstractExtractor implements Extractor
 {
 
 
-    public function extract(array $value, array $parsed = array())
+    public function extract(array $value, array $parsed = array()): array
     {
         $criterion_ = new CriterionExtractor($this->options);
         if ($this->options['group']) // todo ?!

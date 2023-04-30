@@ -17,6 +17,15 @@ class InsertTest extends AbstractCases
         $this->assertEquals($expected, $actual);
     }
 
+    public function testSet()
+    {
+        $sql = "INSERT INTO members SET name = 'John', surname = 'Doe', age = 40";
+        $converter = new SQLToCIBuilder($this->options);
+        $actual = $converter->convert($sql);
+        $expected = $this->getExpectedValue($this->type, "insertSet");
+        $this->assertEquals($expected, $actual);
+    }
+
     public function testBatch()
     {
         $sql = "INSERT INTO members (name,surname, age) VALUES ('Jökull', 'Júlíusson', 30),  ('David', 'Antonsson', null), ('Daniel', 'Kristjansson', null), ('Rubin', 'Pollock', null), ('Þorleifur Gaukur', 'Davíðsson', null) ";

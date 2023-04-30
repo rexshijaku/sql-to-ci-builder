@@ -12,7 +12,7 @@ namespace RexShijaku\SQLToCIBuilder\extractors;
  */
 class GroupByExtractor extends AbstractExtractor implements Extractor
 {
-    public function extract(array $value, array $parsed = array())
+    public function extract(array $value, array $parsed = array()): array
     {
         $parts = array(); // columns
         foreach ($value as $k => $val) {

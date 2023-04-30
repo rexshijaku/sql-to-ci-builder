@@ -21,7 +21,7 @@ use RexShijaku\SQLToCIBuilder\utils\SelectQueryTypes;
  */
 class SelectExtractor extends AbstractExtractor implements Extractor
 {
-    public function extract(array $value, array $parsed = array())
+    public function extract(array $value, array $parsed = array()): array
     {
         $distinct = $this->is_distinct($value);
         if ($distinct)

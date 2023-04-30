@@ -18,7 +18,7 @@ use RexShijaku\SQLToCIBuilder\utils\CriterionContext;
  */
 class HavingExtractor extends AbstractExtractor implements Extractor
 {
-    public function extract(array $value, array $parsed = array())
+    public function extract(array $value, array $parsed = array()): array
     {
         $criterion = new CriterionExtractor($this->options);
         $criterion->getCriteriaParts($value, $parts, CriterionContext::Having);

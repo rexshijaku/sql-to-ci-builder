@@ -13,7 +13,7 @@ namespace RexShijaku\SQLToCIBuilder\extractors;
 class LimitExtractor extends AbstractExtractor implements Extractor
 {
 
-    public function extract(array $value, array $parsed = array())
+    public function extract(array $value, array $parsed = array()): array
     {
         $possible = array('offset', 'rowcount');
 
